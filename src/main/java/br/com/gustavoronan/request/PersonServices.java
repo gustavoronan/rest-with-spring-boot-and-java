@@ -30,6 +30,8 @@ public class PersonServices {
 	
 	public List<Person> findAll() {
 		List<Person> persons = new ArrayList<Person>();
+		logger.info("Finding all People!");
+
 		for(int i = 1; i < 8; i++) {
 			Person person = mockPerson(i);
 			persons.add(person);
@@ -37,7 +39,19 @@ public class PersonServices {
 		return persons;
 	}
 	
-	
+	public Person create(Person person) {
+		logger.info("Creating a person");
+		return person;
+	}
+
+	public Person update(Person person) {
+		logger.info("updating the person");
+		return person;
+	}
+
+	public void delete (String id) {
+		logger.info("person deleted");
+	}
 
 	private Person mockPerson(int i) {
 		
